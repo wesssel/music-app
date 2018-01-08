@@ -11,7 +11,7 @@ Artists.create_artist(
 Artists.create_artist(
   %{
     title: "Pixies",
-    origin: "United Kingdom",
+    origin: "United States",
     imageUrl: "https://philspector.files.wordpress.com/2009/07/pixies-bw.jpg?w=300&h=300"
   }
 )
