@@ -43,7 +43,7 @@ export default {
       axios
         .delete(`/api/artist/${id}`)
         .then(() => {
-          const index = this.artists.findIndex(a => a.id = id)
+          const index = this.artists.findIndex(a => a.id === id)
 
           this.artists.splice(index, 1)
         })

@@ -3,10 +3,7 @@ defmodule MusicApp.Artists.Artist do
   import Ecto.Changeset
   alias MusicApp.Artists.Artist
 
-
   schema "artists" do
-    field :birth_date, :date
-    field :genre, :string
     field :origin, :string
     field :title, :string
     field :imageUrl, :string
@@ -17,7 +14,7 @@ defmodule MusicApp.Artists.Artist do
   @doc false
   def changeset(%Artist{} = artist, attrs) do
     artist
-    |> cast(attrs, [:title, :birth_date, :origin, :genre, :imageUrl])
+    |> cast(attrs, [:title, :origin, :imageUrl])
     |> validate_required([:title])
   end
 end
