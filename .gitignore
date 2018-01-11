@@ -27,4 +27,4 @@ npm-debug.log
 /config/*.secret.exs
 
 # Php storm
-/.idea
+.idea/
