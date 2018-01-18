@@ -34,9 +34,9 @@ Schema:
 
 **Home**
 
-![home](/assets/mock_home.png)
+![home](/docs/assets/mock_home.png)
 
 
 **Edit/Create modal**
 
-![modal](/assets/mock_modal.png)
+![modal](/docs/assets/mock_modal.png)
