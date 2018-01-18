@@ -24,6 +24,10 @@ module.exports = {
         loader: 'pug-loader',
       },
       {
+        test: /\.styl/,
+        loader: 'style-loader!stylus-loader!css-loader',
+      },
+      {
         test: /\.css/,
         loader: 'style-loader!css-loader',
       },
