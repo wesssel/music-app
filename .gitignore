@@ -28,3 +28,6 @@ npm-debug.log
 
 # Php storm
 .idea/
+
+# mac os
+.DS_store
