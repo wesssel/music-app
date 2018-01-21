@@ -22,16 +22,10 @@ describe('Artists', () => {
 
   beforeEach(() => {
     wrapper = mount(Artists, {
-      data: {
+      propsData: {
         artists: mock.artists,
       },
     })
-  })
-
-  it('h1 to equal artists', () => {
-    const $h1 = wrapper.find('h1')
-
-    expect($h1.text()).to.equal('Artists')
   })
 
   it('artist title to be in view', () => {

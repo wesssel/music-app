@@ -3,7 +3,8 @@
   "license": "MIT",
   "scripts": {
     "watch": "webpack --watch",
-    "test": "NODE_ENV=test mocha-webpack --webpack-config webpack.config.js --require test/setup.js js/**/*.spec.js"
+    "test": "NODE_ENV=test mocha-webpack --webpack-config webpack.config.js --require test/setup.js js/**/*.spec.js",
+    "lint": "eslint ./js --ext .js --ext .vue"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

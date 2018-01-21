@@ -1,5 +1,3 @@
-import mock from './mock.json'
-
 import Channel from '../channel/index.vue'
 
 export default {
@@ -7,9 +5,9 @@ export default {
 
   components: { Channel },
 
-  data() {
-    return {
-      artists: mock,
-    }
+  props: {
+    artists: {
+      type: Array,
+    },
   },
 }
