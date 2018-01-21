@@ -3,7 +3,7 @@ el-container
     h1 Artists
   el-main
     el-row
-      el-col(v-for='(artist, index) in artists', v-bind:span='6')
+      el-col(v-for='(artist, index) in artists' v-bind:key='index' v-bind:span='6')
         el-card(:body-style="{ padding: '0px' }")
           img.image(v-bind:src='artist.imageUrl')
           div(style='padding: 14px;')
@@ -12,4 +12,4 @@ el-container
               span.origin {{ artist.origin }}
             .bottom.clearfix
               ul.channels
-                channel(v-for='channel in artist.channels' v-bind:type='channel.type' v-bind:channelId='channel.channelId')
+                channel(v-for='channel in artist.channels' v-bind:key='channel.channelId' v-bind:type='channel.type' v-bind:channelId='channel.channelId')
