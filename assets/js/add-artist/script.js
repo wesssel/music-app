@@ -14,6 +14,7 @@ export default {
         title: '',
         origin: '',
         imageUrl: '',
+        channels: [],
       },
     }
   },
@@ -26,7 +27,20 @@ export default {
         title: '',
         origin: '',
         imageUrl: '',
+        channels: [],
       }
+    },
+
+    addChannel(type) {
+      this.newArtist.channels.push({ type, channelId: '' })
+    },
+
+    channelPlaceholder(type) {
+      return `Channel id of ${type.charAt(0).toUpperCase() + type.slice(1)}`
+    },
+
+    channelIcon(type) {
+      return `fa-${type}`
     },
   },
 }

@@ -1,12 +1,30 @@
 div
   el-button.artist-add(@click='dialogVisible = true', type='success', round) Add artist
   el-dialog(title='Add Artist', :visible.sync='dialogVisible', width='30%')
-    el-form(:model="newArtist")
+    el-form(:model='newArtist')
+
       el-form-item
         el-input(v-model='newArtist.title', placeholder='Title of artist')
+
       el-form-item
         el-input(v-model='newArtist.origin', placeholder='Origin of artist')
+
       el-form-item
         el-input(v-model='newArtist.imageUrl', placeholder='Image url of artist')
+
+      el-form-item
+        el-dropdown(@command='addChannel')
+          span.el-dropdown-link
+            i.fa.fa-plus
+            | !{ '  ' } Add Channel
+          el-dropdown-menu(slot='dropdown')
+            el-dropdown-item(command='spotify') Spotify
+            el-dropdown-item(command='youtube') Youtube
+            el-dropdown-item(command='soundcloud') Soundcloud
+
+      el-form-item(v-for='(channel, index) in newArtist.channels', :key='index')
+        //i.fa(:class='channelIcon(channel.type)')
+        el-input(v-model='channel.channelId', :placeholder='channelPlaceholder(channel.type)')
+
     span.dialog-footer(slot='footer')
       el-button(type='success', @click='submit') Submit
