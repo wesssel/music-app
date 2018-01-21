@@ -10,3 +10,6 @@ el-container
             span {{ artist.title }}
             .bottom.clearfix
               span.origin {{ artist.origin }}
+            .bottom.clearfix
+              ul.channels
+                channel(v-for='channel in artist.channels' v-bind:type='channel.type' v-bind:channelId='channel.channelId')
