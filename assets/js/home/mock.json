@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Stone Roses",
+    "origin": "United Kingdom",
+    "imageUrl": "http://www.classicrockreview.com/Images/1989/AlbumCovers/1989_StoneRoses.jpg",
+    "id": 1,
+    "channels": [
+      {
+        "channelId": "1lYT0A0LV5DUfxr6doRP3d",
+        "type": "spotify"
+      },
+      {
+        "channelId": "UC5HlVQ64L25lubnxJaSTriA",
+        "type": "youtube"
+      }
+    ]
+  },
+  {
+    "title": "Pixies",
+    "origin": "United States",
+    "imageUrl": "https://philspector.files.wordpress.com/2009/07/pixies-bw.jpg?w=300&h=300",
+    "id": 2,
+    "channels": [
+      {
+        "channelId": "6zvul52xwTWzilBZl6BUbT",
+        "type": "spotify"
+      }
+    ]
+  },
+  {
+    "title": "Goldie",
+    "origin": "United Kingdom",
+    "imageUrl": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/0/0/4/2/a619-343b-4c98-8d3f-3401b5b295be.jpg",
+    "id": 3,
+    "channels": [
+      {
+        "channelId": "goldie-official",
+        "type": "soundcloud"
+      }
+    ]
+  },
+  {
+    "title": "Tame Impala",
+    "origin": "Australia",
+    "imageUrl": "https://ukutabs.com/artistimg/Tame%20Impala.jpg?x23675",
+    "id": 4,
+    "channels": [
+      {
+        "channelId": "UCdI8MAC5HoPJSJ4zrgDDI-Q",
+        "type": "youtube"
+      }
+    ]
+  }
+]
