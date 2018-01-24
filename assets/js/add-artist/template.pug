@@ -4,7 +4,7 @@ div
     el-form(:model='newArtist')
 
       el-form-item
-        el-input(v-model='newArtist.title', placeholder='Title of artist')
+        el-input(v-model='newArtist.title', placeholder='Title of artist', :class='{ error: error.title }')
 
       el-form-item
         el-input(v-model='newArtist.origin', placeholder='Origin of artist')
@@ -12,7 +12,7 @@ div
       el-form-item
         el-input(v-model='newArtist.imageUrl', placeholder='Image url of artist')
 
-      el-form-item
+      el-form-item.no-margin
         el-dropdown(@command='addChannel')
           span.el-dropdown-link
             i.fa.fa-plus
@@ -23,8 +23,7 @@ div
             el-dropdown-item(command='soundcloud') Soundcloud
 
       el-form-item(v-for='(channel, index) in newArtist.channels', :key='index')
-        //i.fa(:class='channelIcon(channel.type)')
-        el-input(v-model='channel.channelId', :placeholder='channelPlaceholder(channel.type)')
+        el-input(v-model='channel.channelId', :placeholder='channelPlaceholder(channel.type)', :suffix-icon='"fa" + channelIcon(channel.type)')
 
     span.dialog-footer(slot='footer')
-      el-button(type='success', @click='submit') Submit
+      el-button(type='success', @click='submit').submit Submit

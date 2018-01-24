@@ -10,6 +10,9 @@ export default {
   data() {
     return {
       dialogVisible: false,
+      error: {
+        title: false,
+      },
       newArtist: {
         title: '',
         origin: '',
@@ -21,6 +24,12 @@ export default {
 
   methods: {
     submit() {
+      if (!this.newArtist.title) {
+        this.error.title = true
+
+        return
+      }
+
       this.artists.push(this.newArtist)
       this.dialogVisible = false
       this.newArtist = {
@@ -40,7 +49,7 @@ export default {
     },
 
     channelIcon(type) {
-      return `fa-${type}`
+      return ` fa-${type}`
     },
   },
 }
